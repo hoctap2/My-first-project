@@ -1,0 +1,321 @@
+/* Display navigation, dropdown menu */
+nav,
+section,
+aside {
+  display: block;
+}
+body {
+  font: 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  box-sizing: border-box;
+}
+main {
+  max-width: 960px;
+  margin: auto;
+}
+/* Add a picture to the header */
+.container {
+  background-image: url(pictures/banner.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 0 0 2em 0;
+}
+
+/* Style the logo */
+.logo-container {
+  display: flex;
+  padding: 2em 0;
+  align-items: center;
+  margin-left: auto;
+}
+.logo-container img {
+  z-index: 11;
+}
+/* Style the name of the shop */
+.logo-container h1 {
+  z-index: 12;
+  color: red;
+  font-size: 5vw;
+  text-shadow: 1px 1px 0px #000;
+  text-transform: uppercase;
+  /* font-size: 250%; */
+  text-align: center;
+  width: 100%;
+  padding: 90px 0;
+  margin: 0;
+}
+
+/* Style the navigation bar */
+.nav-item {
+  z-index: 15;
+  flex-grow: 1;
+  border: 1px solid #000;
+  background-color: red;
+}
+.nav-item a {
+  padding: 9px;
+  display: block;
+}
+.nav-item + .nav-item {
+  border-left: none;
+}
+
+.nav-item:hover {
+  background-color: #b22a32;
+}
+
+nav {
+  z-index: 14;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 90%;
+}
+
+nav ul li a {
+  color: #fff;
+  text-shadow: 1px 1px 0px #000;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+/*Display flag */
+.currencyFlag {
+  display: inline-block;
+  margin-bottom: -0.25em;
+}
+
+/* Add a background color, font size, font type...to the body */
+
+/* Set the minumum width for store items, cart, and review*/
+fieldset {
+  min-width: 90%;
+}
+
+/* Set the table to fill the entire container, and make it a single line. */
+table {
+  border: none;
+}
+table tbody {
+  width: 100%;
+  border-collapse: collapse;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+table tbody tr {
+  border: 1px solid #e0e0e0;
+  margin-top: 2em;
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+}
+table tbody td:last-child {
+  border-top: 1px solid #bababa;
+  font-size: 25px;
+}
+table tbody td {
+  font-family: sans-serif;
+  text-align: left;
+  background: whitesmoke;
+  font-weight: bold;
+}
+table tbody td:first-child {
+  border-bottom: 1px solid #bababa;
+}
+hr {
+  color: #bababa;
+  background-color: #bababa;
+}
+/* Modify the table font, set it 1 line and responsive */
+#inventoryOutput {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#inventoryOutput td,
+#customers th {
+  padding: 8px;
+}
+
+/* Style the background of the table */
+
+#inventoryOutput tr:hover {
+  background-color: #ddd;
+}
+
+/* Set the flag image size*/
+.currencyFlag {
+  width: 15px;
+  height: 15px;
+}
+
+/* Change the filter dropdown box */
+#displayFilter {
+  font-size: 13px;
+  padding: 10px 8px 10px 14px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Modify the main content of web page */
+.mainmanu {
+  max-width: 1500px;
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  color: rgb(238, 94, 11);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Change all the button of the web page */
+.button_1 {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+/* Change the button color when move mouse over */
+.button_1:hover {
+  background: linear-gradient(to bottom, #f6f6f6 5%, #c1df70 100%);
+  background-color: #f6f6f6;
+}
+
+/* Change the button size when user click */
+.button_1:active {
+  position: relative;
+  top: 1px;
+}
+
+/* Display the product image by block */
+fieldset {
+  border: 1px solid #e0e0e0;
+}
+fieldset.storeMain {
+  border: 1px solid #e0e0e0;
+}
+fieldset img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150px;
+  height: 150px;
+}
+
+/* Set the image bigger and transition smoothly when user hover the image */
+fieldset img:hover {
+  transition: all 1s ease;
+  transform: scale(1.5);
+}
+
+/* Style the footer */
+footer {
+  background-color: red;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  margin-top: auto;
+}
+input {
+  width: 20em;
+}
+
+/* Media query for screen from 375px to 700*/
+@media screen and (max-width: 700px) {
+  header #shopname,
+  header nav,
+  header nav li {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    padding-bottom: 20px;
+  }
+  table tbody tr {
+    width: 100%;
+  }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    font-size: 1em;
+    display: block;
+    text-align: center;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  fieldset {
+    text-align: center;
+  }
+  footer {
+    clear: both;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  table {
+    width: 300px;
+    height: 300px;
+    table-layout: fixed;
+    overflow-x: scroll;
+  }
+}

@@ -1,0 +1,123 @@
+<!--
+Name: Dan Duc Vu
+Date: 2021/11/25
+Purpose: Final Project
+-->
+
+<!--html version-->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="to sell shoes, boots and sandals">
+    <meta name="keywords" content="shoes, boots, sandals, online store">
+    <meta name="author" content="Park">
+    <!-- Title -->
+    <title>Dan Online Store</title>
+    <!--CSS Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container" id="shopname">
+                <img class="logo" src="pictures/logo.png" alt="danstore's logo">
+                <h1>Dan Online Store</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class=nav-item><a href="index.html">Home</a></li>
+                    <li class=nav-item><a href="about.html">About</a></li>
+                    <li class=nav-item><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--Main Content-->
+    <main>
+        <span id="dateArea" style="float: right;">Date/Time</span>
+        <!--Date/Time-->
+        <br />
+        <!---Form-->
+        <span style="float: right;">
+            Currency:
+            <!---Currency-->
+            <img class="currencyFlag" id="curFlag" src="pictures/Canada_flag.png" alt="canada flag" width="17" height="17" />
+            <!---Currency selector-->
+            <select id="currencySelector" onchange="currencyChange(), displayStoreItems(), calculateCartTotals(), displayUpdatedCart(), flagChange()">
+                <option selected value="CAD">CAD</option>
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+            </select>
+        </span>
+        <br>
+        <!--Display items available by category-->
+        <fieldset class="storeMain">
+            <legend class="mainmanu">Store Items</legend>
+            <select id="displayFilter" onchange="displayStoreItems()">
+                <option>All</option>
+                <option>Shoes</option>
+                <option>Boots</option>
+                <option>Sandals</option>
+            </select>
+       
+            <div id="inventoryOutput"></div>
+
+        </fieldset>
+        <br>
+        <!--Display items detail, add items to cart, remove items from cart-->
+        <fieldset>
+            <legend class="mainmanu">Select Items</legend>
+            <p>
+                Item ID: <br>  <input type="text" id="addItemId" />
+                &nbsp;
+                <span id="addIDValidationMessage"></span>
+            </p>
+            <p>
+                Qty: <br>  <input type="number" id="addItemQty" />
+                &nbsp;
+                <span id="addQtyValidationMessage"></span>
+            </p>
+            <p>
+                <input class="button_1" type="button" value="Item Details" onclick="displayItemDetails()" />
+                <input class="button_1" type="button" value="Add Item" onclick="validation(), displayCartItems(), calculateCartTotals(), displayStoreItems()" />
+                <input class="button_1" type="button" value="Remove Item" onclick="removeFromCart(), displayUpdatedCart(),calculateCartTotals(),displayStoreItems()" />
+            </p>
+        </fieldset>
+        <br>
+
+        <!--Detail order pricing information-->
+        <fieldset>
+            <legend class="mainmanu">Your Cart</legend>
+            <span><strong>| ID | Price | Qty | Subtotal |</strong></span>
+            <br> <br>
+            <div id="cartOutput">No Items in Cart, Add Items to Cart</div>
+            <div id="cartCheckout"></div>
+        </fieldset>
+        <br>
+
+        <!--Submit reviews for items-->
+        <fieldset>
+            <legend class="mainmanu">Review an Item</legend>
+            <p>Product ID:<br> <input type="text" id="reviewId" />&nbsp;<span id="reviewIdMsg"></span></p>
+            <p>Review:<br>  <input type="text" id="reviewDesc" size="40" /></p>
+            <p><input class="button_1" type="button" value="Review" onclick="reviewItem()" /></p>
+        </fieldset>
+        <br />
+        <br />
+        <!--javascript-->
+        <script src="main.js"></script>
+    </main>
+    <!--Footer tag added-->
+    <footer>
+        <p>Copyright: IWD - Fanshawe College</p>
+        <p>Email: <a href="mailto:d_vu@fanshaweonline.ca">d_vu@fanshaweonline.ca</a></p>
+    </footer>
+</body>
+
+</html>

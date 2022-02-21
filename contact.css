@@ -1,0 +1,138 @@
+/* Style the header */
+nav,
+section,
+aside {
+  display: block;
+}
+
+/* Add a background color, font size, font type...to the body */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  font: 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main {
+  max-width: 960px;
+  margin: auto;
+}
+/*style the image*/
+img.body-item {
+  width: 100%;
+  height: auto;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dan {
+  background-image: url(pictures/banner.png);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 0 2em 0;
+}
+
+.logo-container {
+  display: flex;
+  padding: 2em 0;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Style the name of the shop */
+.logo-container h1 {
+  color: #e82c32;
+  font-size: 5vw;
+  text-shadow: 1px 1px 0px #000;
+  text-transform: uppercase;
+  /* font-size: 250%; */
+  text-align: center;
+  width: 100%;
+  padding: 90px 0;
+  margin: 0;
+}
+
+.item {
+  flex: 0 100%;
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: #fff;
+  border: 1px solid #c7c7c7;
+}
+
+.nav-item {
+  flex-grow: 1;
+  border: 1px solid #000;
+  padding: 5px;
+  background-color: #e82c32;
+}
+
+.nav-item + .nav-item {
+  border-left: none;
+}
+
+.nav-item:hover {
+  background-color: #b22a32;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 90%;
+}
+
+nav ul li a {
+  color: #fff;
+  text-shadow: 1px 1px 0px #000;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+/* Style the header in the main section */
+.dan1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  color: rgb(238, 94, 11);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+footer {
+  background-color: #e82c32;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  margin-top: auto;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 700px) {
+  .item {
+    flex: 0 95%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .item {
+    flex: 0 85%;
+  }
+}
